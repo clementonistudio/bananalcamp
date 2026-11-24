@@ -13,7 +13,6 @@
       :root {
         color-scheme: light;
         --yellow: #ffc400;
-        --yellow-soft: #fff2ad;
         --ink: #080808;
         --paper: #fffef9;
       }
@@ -80,17 +79,6 @@
         place-items: center;
       }
 
-      .logo-wrap::before {
-        position: absolute;
-        z-index: -1;
-        width: 88%;
-        aspect-ratio: 1;
-        border-radius: 50%;
-        background: var(--yellow-soft);
-        content: "";
-        filter: blur(1px);
-      }
-
       .logo {
         display: block;
         width: 100%;
@@ -124,7 +112,7 @@
       h1 {
         max-width: 10ch;
         margin: 0;
-        font-size: clamp(3.25rem, 8vw, 7.2rem);
+        font-size: clamp(2.9rem, 4.1vw, 4.75rem);
         font-style: italic;
         font-weight: 950;
         letter-spacing: -0.075em;
@@ -151,26 +139,6 @@
         transform: skewX(-10deg);
       }
 
-      .status {
-        display: flex;
-        align-items: center;
-        gap: 0.7rem;
-        margin: clamp(2rem, 4vw, 3rem) 0 0;
-        color: #474747;
-        font-size: clamp(0.92rem, 1.5vw, 1.06rem);
-        line-height: 1.5;
-      }
-
-      .status-dot {
-        position: relative;
-        flex: 0 0 auto;
-        width: 0.7rem;
-        height: 0.7rem;
-        border-radius: 50%;
-        background: var(--yellow);
-        box-shadow: 0 0 0 5px rgba(255, 196, 0, 0.22);
-      }
-
       @media (max-width: 780px) {
         .maintenance {
           grid-template-columns: 1fr;
@@ -189,8 +157,7 @@
           margin-inline: auto;
         }
 
-        .eyebrow,
-        .status {
+        .eyebrow {
           justify-content: center;
         }
 
@@ -243,10 +210,6 @@
       <section class="content">
         <p class="eyebrow">Estamos preparando novidades</p>
         <h1 id="maintenance-title">Site em <span>manutenção</span></h1>
-        <p class="status">
-          <span class="status-dot" aria-hidden="true"></span>
-          Voltaremos em breve. Obrigado pela compreensão.
-        </p>
       </section>
     </main>
   </body>
